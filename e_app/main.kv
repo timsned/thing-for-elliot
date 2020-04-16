@@ -1,18 +1,23 @@
-FloatLayout:
-    MDTextField:
-        hint_text: "name"
-        pos_hint: {'center_x': 0.5, 'center_y': 0.8}
-        id: textfield
-        
-    MDRaisedButton:
-        pos_hint: {'center_x': 0.5, 'center_y': 0.65}
-        text: "Add Athlete"  
-        on_press: app.add_athlete()  
+
+<OurScreen>
+    BoxLayout:
+        NamesDropdown:
+        PrintNameButton:
 
 
 
-    MDRaisedButton:
-        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-        id: dropdownbutton
-        text: "Open Menu"
-        on_press: app.open_dropdown()    
+
+<NamesDropdown>
+    text: "Open Menu"
+    on_press: root.open_dropdown()
+
+
+
+<PrintNameButton>
+    text: "Print Name"
+    on_press: root.print_name()
+
+
+
+
+OurScreen:
